@@ -22,8 +22,8 @@ html.dark {
 }
 
 .portraitImage {
-  animation: pulsateBorder 2s infinite;
-  border-radius: 50%; /* Ensure the image is circular to match the rounded-full tailwind class */
+  animation: pulsateBorder 3s infinite;
+  border-radius: 70%; /* Ensure the image is circular to match the rounded-full tailwind class */
 }
 
 

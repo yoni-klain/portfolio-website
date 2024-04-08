@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
@@ -9,10 +9,14 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import profilePic from '../public/assets/Images/portrait.jpg'
+import Modal from "@/components/modal";
+
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const [isModalOpen, setModalOpen] = useState(false);
 
   return (
     <section
@@ -31,13 +35,15 @@ export default function Intro() {
             }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
+
+              src={profilePic}
               alt="Yoni Klain portrait"
               width="384" // Made the image twice as big
               height="384" // Made the image twice as big
               quality="95"
               priority={true}
               className="h-60 w-60 rounded-full object-cover border-[0.35rem] border-white shadow-xl portraitImage "
+              onClick={() => setModalOpen(true)}
             />
           </motion.div>
 
@@ -56,6 +62,9 @@ export default function Intro() {
           </motion.span>
         </div>
       </div>
+      <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
+        <div>Hello World</div>
+      </Modal>
 
       <motion.h1
         className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
