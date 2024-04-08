@@ -11,6 +11,7 @@ import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import profilePic from '../public/assets/Images/portrait.jpg'
 import Modal from "@/components/modal";
+import Chat from "./chat";
 
 
 export default function Intro() {
@@ -62,8 +63,9 @@ export default function Intro() {
           </motion.span>
         </div>
       </div>
+      
       <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
-        <div>Hello World</div>
+        <Chat onSendMessage={(msg) => console.log(msg)} />
       </Modal>
 
       <motion.h1
