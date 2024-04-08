@@ -9,11 +9,13 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import profilePic from '../public/assets/Images/portrait.jpg'
+
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
-
+   
   return (
     <section
       ref={ref}
@@ -31,7 +33,8 @@ export default function Intro() {
             }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
+            
+              src={profilePic}
               alt="Yoni Klain portrait"
               width="384" // Made the image twice as big
               height="384" // Made the image twice as big
