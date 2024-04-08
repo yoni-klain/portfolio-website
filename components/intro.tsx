@@ -1,10 +1,22 @@
 "use client";
 
-import Image from "next/image";
+import React, { useState } from "react";
 import Modal from './Modal';
-const [isModalOpen, setModalOpen] = useState(false);
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+import { HiDownload } from "react-icons/hi";
+import { FaGithubSquare } from "react-icons/fa";
+import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
+export default function Intro() {
+  const { ref } = useSectionInView("Home", 0.5);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+
+  const [isModalOpen, setModalOpen] = useState(false); // Moved inside the component
   // Function to toggle modal
+  const toggleModal = () => setModalOpen(!isModalOpen);
   const toggleModal = () => setModalOpen(!isModalOpen);
 
 import React from "react";
