@@ -1,6 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import Modal from './Modal';
+const [isModalOpen, setModalOpen] = useState(false);
+
+  // Function to toggle modal
+  const toggleModal = () => setModalOpen(!isModalOpen);
+
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
