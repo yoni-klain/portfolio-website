@@ -36,9 +36,8 @@ export default function Intro() {
               width="384" // Made the image twice as big
               height="384" // Made the image twice as big
               quality="95"
-              quality="95"
               priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              className="h-60 w-60 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
           </motion.div>
 
