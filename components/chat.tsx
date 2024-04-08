@@ -1,10 +1,15 @@
-// components/Chat.js or components/Chat.tsx
+// Assuming components/Chat.tsx
 import React, { useState } from 'react';
 
-const Chat = ({ onSendMessage }) => {
+// Define a type for the component's props
+interface ChatProps {
+  onSendMessage: (msg: string) => void;
+}
+
+const Chat: React.FC<ChatProps> = ({ onSendMessage }) => {
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSendMessage(message);
     setMessage('');
