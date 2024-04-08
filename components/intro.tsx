@@ -50,12 +50,12 @@ export default function Intro() {
           >
             <Image
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
-              alt="Ricardo portrait"
-              width="192"
-              height="192"
+              alt="Yoni Klain portrait"
+              width="384" // Made the image twice as big
+              height="384" // Made the image twice as big
               quality="95"
               priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              className="h-60 w-60 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
           </motion.div>
 
@@ -80,11 +80,11 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Ricardo.</span> I'm a{" "}
-        <span className="font-bold">full-stack developer</span> with{" "}
-        <span className="font-bold">8 years</span> of experience. I enjoy
-        building <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">React (Next.js)</span>.
+        <span className="font-bold">Hello, I'm Yoni Klain.</span> I'm a{" "}
+        <span className="font-bold">technial group leader</span> with{" "}
+        <span className="font-bold">more than 20 years</span> of experience. I enjoy
+        building <span className="italic">strong technical teams & lead complicated projects</span>. My focus is{" "}
+        <span className="underline">to be a leader, not just a manager </span>.
       </motion.h1>
 
       <motion.div

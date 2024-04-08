@@ -1,3 +1,20 @@
+@keyframes pulsateBorder {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 255, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(0, 255, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0px rgba(0, 255, 0, 0.7);
+  }
+}
+
+.portraitImage {
+  animation: pulsateBorder 2s infinite;
+  border-radius: 50%; /* Ensure the image is circular to match the rounded-full tailwind class */
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
